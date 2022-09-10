@@ -9,5 +9,4 @@ class ApplicationController < Sinatra::Base
     enable :sessions
     set :session_secret, SecureRandom.hex(24)
   end
-
 end
