@@ -1,3 +1,6 @@
+This is a Sinatra Back End API. 
+Link to the FrontEnd: https://github.com/wandiamugo/Frontend-React.git
+
 # Phase 3 Project Guidelines
 
 ## Learning Goals
