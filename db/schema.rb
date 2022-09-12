@@ -10,42 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_08_100456) do
+ActiveRecord::Schema.define(version: 2022_09_10_114159) do
 
-  create_table "shopping_categories", force: :cascade do |t|
-    t.string "name"
-  end
-
-  create_table "shopping_items", force: :cascade do |t|
-    t.string "title"
-    t.integer "shopping_category_id"
-    t.float "price"
-    t.integer "amount"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
-  end
-
-  create_table "todo_categories", force: :cascade do |t|
-    t.string "name"
+  create_table "groups", force: :cascade do |t|
+    t.string "group"
   end
 
   create_table "todos", force: :cascade do |t|
-    t.string "title"
-    t.integer "todo_category_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.boolean "completed"
+    t.string "activities"
+    t.integer "group_id"
     t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "email_address"
-    t.string "password_digest"
-    t.float "budget"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "email"
+    t.string "password"
   end
 
 end
